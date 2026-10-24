@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ignasi Albert</title>
+<style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    --bg: #f6f7f4;
+    --fg: #1d2a2a;
+    --muted: #5d6b6b;
+    --accent: #1f6f6b;
+    --line: #d9dfdb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #151c1c;
+      --fg: #e8eeec;
+      --muted: #9aa9a7;
+      --accent: #6cc4bd;
+      --line: #2b3737;
+    }
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.25rem;
+  }
+  main { width: 100%; max-width: 32rem; }
+  h1 { font-size: clamp(2.4rem, 8vw, 3.4rem); line-height: 1.1; margin: 0 0 .5rem; font-weight: 600; }
+  .role { color: var(--muted); font-size: 1.15rem; margin: 0 0 2rem; }
+  p.about { margin: 0 0 2rem; font-size: 1.1rem; }
+  nav { display: flex; gap: 1.5rem; flex-wrap: wrap; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+  a { color: var(--accent); text-decoration: none; font-size: 1.05rem; }
+  a:hover, a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Your Name</h1>
+    <p class="role">Designer &amp; developer</p>
+    <p class="about">I make simple things that work well.</p>
+    <nav>
+      <a href="mailto:you@example.com">Email</a>
+      <a href="https://github.com/">GitHub</a>
+      <a href="https://linkedin.com/">LinkedIn</a>
+    </nav>
+  </main>
+</body>
+</html>
